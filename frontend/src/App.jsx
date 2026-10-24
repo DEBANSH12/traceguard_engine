@@ -9,7 +9,7 @@ import {
   ShieldAlert,
 } from "lucide-react";
 
-const API_BASE = `${(import.meta.env.VITE_API_BASE_URL || "http://localhost:8080").replace(/\/$/, "")}/api/v1/incidents`;
+const API_BASE = (window.location.hostname === "localhost" ? "http://localhost:8080" : "https://traceguard-backend-09vb.onrender.com") + "/api/v1/incidents";
 
 export default function App() {
   const [incidents, setIncidents] = useState([]);
@@ -377,5 +377,7 @@ export default function App() {
     </div>
   );
 }
+
+
 
 
