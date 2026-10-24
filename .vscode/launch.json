@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "TraceGuard Backend (PostgreSQL - Default)",
+      "request": "launch",
+      "mainClass": "com.debansh.traceguard.TraceGuardApplication",
+      "projectName": "traceguard",
+      "cwd": "${workspaceFolder}/backend"
+    },
+    {
+      "type": "java",
+      "name": "TraceGuard Backend (Zero-Docker Local H2 Mode)",
+      "request": "launch",
+      "mainClass": "com.debansh.traceguard.TraceGuardApplication",
+      "projectName": "traceguard",
+      "cwd": "${workspaceFolder}/backend",
+      "args": "--spring.profiles.active=local"
+    }
+  ]
+}
